@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:4000/ -->
+<html lang="en ">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京英智能科技 || jingying </title>
+    <meta name="author" content="京英智能科技">
+    <meta name="description" content="北京京英智能科技有限公司">
+    <meta name="keywords" content="京英智能科技 | 智能科技 | LLM">
+    <link rel="icon" href="./static/favicon.ico">
+    <link rel="stylesheet" href="./static/antd.min.css">
+
+    <link rel="stylesheet" href="./static/night-theme.css">
+
+    <script src="./static/vue.js"></script>
+    <script src="./static/antd.min.js"></script>
+
+<body>
+
+<div id="loading" style="display: none;">
+    <div id="loadleft"
+         style="width: 0px; background-color: rgb(255, 255, 255); transition: width 0.6s ease-out 0s;"></div>
+    <div id="loadright"
+         style="width: 0px; background-color: rgb(255, 255, 255); transition: width 0.6s ease-out 0s;"></div>
+    <div style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+        <div id="loadcontent"
+             style="width: 400px; height: 400px; padding: 50px; border-radius: 50%; display: flex; justify-content: center; align-items: center; border: 10px solid rgb(163, 221, 251); text-align: center; opacity: 0; transition: opacity 0.3s ease-out 0s;">
+            <div>
+                <h2>LOADING...</h2>
+                <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                <div>
+                    <img src="./static/dancingkitty.gif" alt="loading">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="layout">
+    <div style="">
+        <div id="menu_show">
+            <nav id="menu" class="show-menu menu-color">
+                <div class="desktop-menu">
+                    <a href="http://jingying.co"><span class="title">京英</span></a>
+                    <a href="http://jingying.co/"><span><i aria-label="icon: home" class="anticon anticon-home">
+                        <svg viewBox="64 64 896 896" data-icon="home" width="1em" height="1em" fill="currentColor"
+                             aria-hidden="true" focusable="false" class=""><path
+                                d="M946.5 505L534.6 93.4a31.93 31.93 0 0 0-45.2 0L77.5 505c-12 12-18.8 28.3-18.8 45.3 0 35.3 28.7 64 64 64h43.4V908c0 17.7 14.3 32 32 32H448V716h112v224h265.9c17.7 0 32-14.3 32-32V614.3h43.4c17 0 33.3-6.7 45.3-18.8 24.9-25 24.9-65.5-.1-90.5z"></path></svg></i></span>
+                        <span>主页</span></a>
+
+                    <a href="http://jingying/about.html"><span><i aria-label="icon: idcard"
+                                                                  class="anticon anticon-idcard"><svg
+                            viewBox="64 64 896 896" data-icon="idcard" width="1em" height="1em" fill="currentColor"
+                            aria-hidden="true" focusable="false" class=""><path
+                            d="M373 411c-28.5 0-51.7 23.3-51.7 52s23.2 52 51.7 52 51.7-23.3 51.7-52-23.2-52-51.7-52zm555-251H96c-17.7 0-32 14.3-32 32v640c0 17.7 14.3 32 32 32h832c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32zM608 420c0-4.4 1-8 2.3-8h123.4c1.3 0 2.3 3.6 2.3 8v48c0 4.4-1 8-2.3 8H610.3c-1.3 0-2.3-3.6-2.3-8v-48zm-86 253h-43.9c-4.2 0-7.6-3.3-7.9-7.5-3.8-50.5-46-90.5-97.2-90.5s-93.4 40-97.2 90.5c-.3 4.2-3.7 7.5-7.9 7.5H224a8 8 0 0 1-8-8.4c2.8-53.3 32-99.7 74.6-126.1a111.8 111.8 0 0 1-29.1-75.5c0-61.9 49.9-112 111.4-112s111.4 50.1 111.4 112c0 29.1-11 55.5-29.1 75.5 42.7 26.5 71.8 72.8 74.6 126.1.4 4.6-3.2 8.4-7.8 8.4zm278.9-53H615.1c-3.9 0-7.1-3.6-7.1-8v-48c0-4.4 3.2-8 7.1-8h185.7c3.9 0 7.1 3.6 7.1 8v48h.1c0 4.4-3.2 8-7.1 8z"></path></svg></i></span>
+                        <span>关于我们</span></a>
+                </div>
+                <div id="phone-menu" class="phone-menu false">
+                    <div class="title"><span style="margin-right: 10px;">
+                        <i aria-label="icon: appstore" class="anticon anticon-appstore"><svg viewBox="64 64 896 896"
+                                                                                             data-icon="appstore"
+                                                                                             width="1em" height="1em"
+                                                                                             fill="currentColor"
+                                                                                             aria-hidden="true"
+                                                                                             focusable="false" class="">
+                            <path d="M864 144H560c-8.8 0-16 7.2-16 16v304c0 8.8 7.2 16 16 16h304c8.8 0 16-7.2 16-16V160c0-8.8-7.2-16-16-16zm0 400H560c-8.8 0-16 7.2-16 16v304c0 8.8 7.2 16 16 16h304c8.8 0 16-7.2 16-16V560c0-8.8-7.2-16-16-16zM464 144H160c-8.8 0-16 7.2-16 16v304c0 8.8 7.2 16 16 16h304c8.8 0 16-7.2 16-16V160c0-8.8-7.2-16-16-16zm0 400H160c-8.8 0-16 7.2-16 16v304c0 8.8 7.2 16 16 16h304c8.8 0 16-7.2 16-16V560c0-8.8-7.2-16-16-16z"></path></svg></i></span>
+                        <span>京英</span></div>
+                    <div class="items" style="display: none;">
+                        <a href="http://jingying.co/">
+                        <div class="item">
+                            <div style="min-width: 20px; max-width: 50px; width: 10%;">
+                                <i aria-label="icon: home" class="anticon anticon-home">
+                                    <svg viewBox="64 64 896 896" data-icon="home" width="1em" height="1em"
+                                         fill="currentColor" aria-hidden="true" focusable="false" class="">
+                                        <path d="M946.5 505L534.6 93.4a31.93 31.93 0 0 0-45.2 0L77.5 505c-12 12-18.8 28.3-18.8 45.3 0 35.3 28.7 64 64 64h43.4V908c0 17.7 14.3 32 32 32H448V716h112v224h265.9c17.7 0 32-14.3 32-32V614.3h43.4c17 0 33.3-6.7 45.3-18.8 24.9-25 24.9-65.5-.1-90.5z"></path>
+                                    </svg>
+                                </i></div>
+                            <div style="min-width: 100px; max-width: 150%; width: 20%;">home</div>
+                        </div>
+                        </a>
+                        <a href="http://jingying.co/about.html">
+                        <div class="item">
+                            <div style="min-width: 20px; max-width: 50px; width: 10%;"><i aria-label="icon: idcard"
+                                                                                          class="anticon anticon-idcard">
+                                <svg viewBox="64 64 896 896" data-icon="idcard" width="1em" height="1em"
+                                     fill="currentColor" aria-hidden="true" focusable="false" class="">
+                                    <path d="M373 411c-28.5 0-51.7 23.3-51.7 52s23.2 52 51.7 52 51.7-23.3 51.7-52-23.2-52-51.7-52zm555-251H96c-17.7 0-32 14.3-32 32v640c0 17.7 14.3 32 32 32h832c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32zM608 420c0-4.4 1-8 2.3-8h123.4c1.3 0 2.3 3.6 2.3 8v48c0 4.4-1 8-2.3 8H610.3c-1.3 0-2.3-3.6-2.3-8v-48zm-86 253h-43.9c-4.2 0-7.6-3.3-7.9-7.5-3.8-50.5-46-90.5-97.2-90.5s-93.4 40-97.2 90.5c-.3 4.2-3.7 7.5-7.9 7.5H224a8 8 0 0 1-8-8.4c2.8-53.3 32-99.7 74.6-126.1a111.8 111.8 0 0 1-29.1-75.5c0-61.9 49.9-112 111.4-112s111.4 50.1 111.4 112c0 29.1-11 55.5-29.1 75.5 42.7 26.5 71.8 72.8 74.6 126.1.4 4.6-3.2 8.4-7.8 8.4zm278.9-53H615.1c-3.9 0-7.1-3.6-7.1-8v-48c0-4.4 3.2-8 7.1-8h185.7c3.9 0 7.1 3.6 7.1 8v48h.1c0 4.4-3.2 8-7.1 8z"></path>
+                                </svg>
+                            </i></div>
+                            <div style="min-width: 100px; max-width: 150%; width: 20%;">关于我们</div>
+                        </div>
+                        </a>
+                        </div>
+                    <div class="curtain" style="display: none;"></div>
+                </div>
+            </nav>
+        </div>
+        <div id="main">
+            <div id="home-head" style="background-image: url('./static/home.jpg');">
+                <div id="home-info" class="home-info"><span class="loop"></span> <span class="loop"></span> <span
+                        class="loop"></span> <span class="loop"></span> <span class="info"><div
+                        class="wrap"><h1>智能对话</h1> <h3></h3> <h5></h5></div></span></div>
+            </div>
+            </div>
+            <footer id="footer" style="top: 150px;">
+                <div class="footer-wrap">
+                    <div>
+                        © 2023 JINGYING | <a href="http://jingying.co" target="_blank">jingying.co</a>
+                        <span class="footer-icon"><i aria-label="icon: flag" class="anticon anticon-flag"><svg
+                                viewBox="64 64 896 896" data-icon="flag" width="1em" height="1em" fill="currentColor"
+                                aria-hidden="true" focusable="false" class=""><path
+                                d="M880 305H624V192c0-17.7-14.3-32-32-32H184v-40c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v784c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8V640h248v113c0 17.7 14.3 32 32 32h416c17.7 0 32-14.3 32-32V337c0-17.7-14.3-32-32-32z"></path></svg></i></span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+
+</body>
+</html>
